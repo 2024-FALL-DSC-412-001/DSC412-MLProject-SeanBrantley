@@ -1,5 +1,5 @@
 # DSC412-project
 
-Fill out this readme to point your reader in the correct direction.
+# Part 2 - Project Proposal
 
-Every milestone after and including milestone 2 should be submitted through this repo. 
+Download DSC412_001_FA24_PR_sbrantl.pdf to view the project proposal
