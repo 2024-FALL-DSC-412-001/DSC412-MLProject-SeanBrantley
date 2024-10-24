@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1729546656",
+        "python_version": "3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\seann\\anaconda3\\envs\\new_ml_env\\Scripts\\mlagents-learn config/mazerunner_config.yml --run-id=MazerunnerRun2",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.4.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1729546666"
+    },
+    "total": 10.5810861,
+    "count": 1,
+    "self": 0.007477300000001463,
+    "children": {
+        "run_training.setup": {
+            "total": 0.10584460000000018,
+            "count": 1,
+            "self": 0.10584460000000018
+        },
+        "TrainerController.start_learning": {
+            "total": 10.4677642,
+            "count": 1,
+            "self": 0.00011379999999761026,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 10.4676342,
+                    "count": 1,
+                    "self": 10.4676342
+                },
+                "TrainerController._save_models": {
+                    "total": 1.6200000001020953e-05,
+                    "count": 1,
+                    "self": 1.6200000001020953e-05
+                }
+            }
+        }
+    }
+}
