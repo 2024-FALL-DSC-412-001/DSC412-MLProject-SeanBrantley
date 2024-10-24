@@ -2,12 +2,12 @@
 
 ## Introduction
 
-For my machine-learning (ML) project, I am attempting to create an intelligent avatar that can beat a game I developed in the Unity software called Mazerunner.
+For my machine-learning (ML) project, I am attempting to create an intelligent avatar, named Boats, that can beat a game I developed in the Unity software called Mazerunner.
 This project explores reinforcement learning (RL) in a Bomberman-like environment created using Unity's ML-Agents toolkit.
 
-The underlying motivation for this project is to explore the metaphysical concept of "the present."
-In short, as an artificial agent generates as it learns to navigate a virtual task environment the spacetime patterns generated are a subset of the vast possible spatiotemporal arrangments that can arise from a single starting moment.
-More information about this incorporation of possibility in a spacetime framework can be found in the part 2 project proposal section.
+The underlying motivation for this project is to investigate the metaphysical concept of "the present," particularly how reinforcement learning agents' decision-making mirrors the way human actions unfold in real-time. As the artificial agent learns to navigate a virtual task environment, the spacetime patterns generated represent a subset of the vast possible spatiotemporal arrangements that could arise from a single starting moment.
+
+More information about the game in general and this claim that the concept of possibility should be included in a spacetime framework can be found in the part 2 project proposal section.
 
 The remainder of the README.md file contains the ordered project parts.
 
@@ -17,15 +17,15 @@ To view the project proposal navigate to the proposal folder and download DSC412
 
 ## Part 3 - Project Check In
 
-As of 10/24, a week before the check-in date, I have managed to integrate
+At this point, I have managed to integrate the ml-agent package functionality into my game but have not performed any actual test trials. This setup stage was more difficult than I anticipated as I took many unnecessary steps while figuring out how to combine the ML code with mine, updating my software, and developing an appropriate conda environment. After nearly fifteen hours of debugging, I have a stripped-down version of my game that has facilitated a single avatar training session; where Boats jiggled around in the starting area for seven minutes as it moved its way up the first corridor. To make this happen I added several components to the player GameObject, such as a Ray Perception Sensor 3D, a Decision Requester, an agent script, and a behavior parameters script. These pieces have been interwoven into preexisting scripts like the player controller and game manager. In addition to this refactoring, a YAML configuration and conda environment were needed to perform the first successful episode. Respectively, these two pieces can be found in the config folder and the `requirements.txt` file.
 
-### Data Generation Process
+### Future Data Generation Process
 
 Unlike supervised learning projects where data is imported and organized from external files, RL generates data through interactions between the agent and the environment. 
 
 The Unity ML-Agent toolkit was used to enable this integration. Setting up the environment involved coding state observations, action spaces, and reward functions to simulate meaningful interactions for the agent. The agent learned from these interactions, which creates the dataset that will be fed back into the learning model.
 
-### Model Training
+### Expected Model Training
 
 In reinforcement learning, the agent learns through trial and error by receiving rewards or penalties for its actions in the environment. This project uses the Unity ML-Agent toolkit to train an agent based on a custom reward structure.
 
@@ -34,7 +34,7 @@ In reinforcement learning, the agent learns through trial and error by receiving
 - **Action Space:** The agent decides whether to move, place bombs, or wait based on its perception.
 - **Reward Function:** The agent is rewarded for avoiding danger and eliminating obstacles, while penalties are given for unfavorable actions.
 
-Training was done iteratively, with the model continuously improving as it explored more possible scenarios.
+Training will be done iteratively, with the model continuously improving as it explores more possible scenarios.
 
 ### Rubric Items Not Addressed
 
@@ -43,5 +43,28 @@ Due to the nature of reinforcement learning, certain elements of the milestone r
 1. **Importing Data:** No external data was imported. The data will be generated in real-time by the agent interacting with the environment.
 2. **Organizing Data:** The project focuses on continuous data generation during training, as opposed to organizing static datasets.
 3. **Train-Test Split:** RL does not use a train-test split, as learning is performed iteratively by interacting with the environment.
-4. **Analyzing Data:** Data analysis in RL happens dynamically as part of the agent's feedback loop.
+4. **Analyzing Data:** Data analysis in RL happens dynamically as part of the agent's feedback loop. However, a detailed analysis of the spacetime patterns generated by the agent's behavior will be conducted at the end of the project to assess its performance and decision-making patterns over time.
 
+### Requirements
+
+The project requires the following dependencies:
+
+- Unity 2021.1 or higher
+- Unity ML-Agents package 3.0.0
+- Python 3.8
+
+To install the necessary packages, use the provided `requirements.txt` file.
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Instructions
+
+Follow these steps to set up and run the project:
+
+1. Clone the repository.
+2. Create a conda environment and install the necessary dependencies.
+3. Open the project in Unity.
+4. Run the command `mlagents-learn config/mazerunner_config.yml --run-id=MazerunnerRun1`.
+5. Press play to begin a trial episode.
