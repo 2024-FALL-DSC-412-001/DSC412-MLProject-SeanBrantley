@@ -1,0 +1,27 @@
+behaviors:
+  Mazerunner1:  # Name of the agent behavior (match it with the Behavior Parameters in Unity)
+    trainer_type: ppo  # Proximal Policy Optimization algorithm
+    hyperparameters:
+      batch_size: 1048  # Number of experiences used for each training update
+      buffer_size: 10240  # How many steps of data to collect before updating the model
+      learning_rate: 3.0e-4  # Initial learning rate for training
+      beta: 0.7  # Strength of the entropy regularization (encourages exploration)
+      epsilon: 0.2  # Clipping factor to limit the change in policy per update
+      lambd: 0.95  # Lambda for GAE (Generalized Advantage Estimation)
+      num_epoch: 3  # Number of passes through the experience buffer during training
+      learning_rate_schedule: linear  # Linearly decrease the learning rate over time
+    network_settings:
+      normalize: true  # Normalize the observations to improve learning
+      hidden_units: 256  # Number of units in each fully connected layer
+      num_layers: 2  # Number of hidden layers in the neural network
+      memory:  # Use recurrent neural networks (LSTM/GRU) for sequence-based tasks
+        sequence_length: 64  # Length of the sequences
+        memory_size: 128  # Size of the memory
+    reward_signals:
+      extrinsic:  # Standard external rewards from the environment
+        gamma: 0.99  # Discount factor for future rewards (how far into the future the agent looks for rewards)
+        strength: 1.0  # Strength of the reward signal
+    max_steps: 500000  # Total number of training steps
+    time_horizon: 128  # How many steps of experience to collect per agent before training (smaller values lead to faster updates)
+    summary_freq: 1000  # Frequency of summaries in steps (how often to record data for TensorBoard)
+    checkpoint_interval: 5000  # Save the model every 1,000 steps
