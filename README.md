@@ -68,3 +68,7 @@ Follow these steps to set up and run the project:
 3. Open the project in Unity.
 4. Run the command `mlagents-learn config/mazerunner_config.yml --run-id=MazerunnerRun1`.
 5. Press play to begin a trial episode.
+
+## Part 4 and 5 - Project Deliverables
+
+To view the project deliverable (final report and elevator pitch video) navigate to the deliverables folder and download either DSC412_001_FA24_PV_sbrantl.mp4 or DSC412_001_FA24_FR_sbrantl.pdf.
